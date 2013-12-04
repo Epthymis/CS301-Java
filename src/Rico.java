@@ -1,6 +1,6 @@
-import javax.swing.table.TableCellEditor;
 import java.util.Set;
 import java.util.Vector;
+import java.lang.Integer;
 
 /**
  * Created with IntelliJ IDEA.
@@ -18,12 +18,10 @@ public class Rico {
     static Vector<String>[] attributeValues;
     // List of Decision Attributes
     static int[] decAttr;
-    // The Partition of the Decision Attributes
-    static int[] nonDecAttr;
-    // List of subsets that for a minimal coverage
-    static Vector<Set> dAPartition;
     // List of Non-Decision Attributes
-    static Vector<Set> closures;
+    static int[] nonDecAttr;
+    // List of subsets that form a minimal coverage
+    static Vector<Subset> closures;
 
     // Constants
     static int MAX_PARTITION_SIZE = 7;
@@ -31,25 +29,43 @@ public class Rico {
     // Classes
     public class Subset {
         private int size;
-        private Set<Set> partition;
+        protected Set<Set<Integer>> partitions;
 
-        public boolean properSubset(String[] part, String[] dAPart) // Can be edited
-        {
+        public Subset(Set attributes){
+            size = attributes.size();
+            switch (size){
+                case 1: // Calls partitionOf1Attr
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;
+                default:
+                    break;
+            }
+        }
 
-            for( int i = 0; i < part.length; i++){ // Look into for each
-                if( !included(part[i], dAPart)){
+        public boolean properSubset(Subset otherSubset){
+            for(Set<Integer> part: otherSubset.partitions){
+                if(!included(part)){
                     return false;
                 }
             }
             return true;
         }
 
-        private boolean included(String item, String[] dAPart){ // Not Done
-            if( dAPart.length != 0){
-                boolean bacon = true;
-                return (bacon || included(item, dAPart) );
+        private boolean included(Set<Integer> item){
+            for( Set<Integer> part: partitions){
+                if( part.containsAll(item))
+                    return true;
             }
-            return true;
+            return false;
         }
 
     }
@@ -61,11 +77,10 @@ public class Rico {
     }
 
     private static int lookup( String value, int attrNum ){
-        int offset = -1; // Exit condition for loop
-        Vector<String> attrLookupVect = attributeValues[attrNum]; // The row of the lookup table
-        int iterations = attrLookupVect.size(); // Get size of the look up row
-        for( int i = 0; i < iterations && offset == -1; i++ ){
-            if( value.equals(attrLookupVect.get(i))){ // Check if the value is found
+        Vector<String> attributeValues = Rico.attributeValues[attrNum]; // The row of the lookup table
+        int numValues = attributeValues.size(); // Get size of the look up row
+        for( int i = 0; i < numValues; i++ ){
+            if( value.equals(attributeValues.get(i))){ // Check if the value is found
                 return i; // Set the offset to be returned
             }
         }
@@ -76,29 +91,4 @@ public class Rico {
     {
 
     }
-
-    private static void partitionSize1() // Not Done
-    {
-
-    }
-
-    private static boolean properSubset(String[] part, String[] dAPart) // Can be edited
-    {
-
-        for( int i = 0; i < part.length; i++){ // Look into for each
-            if( !included(part[i], dAPart)){
-                return false;
-            }
-        }
-        return true;
-    }
-
-    private static boolean included(String item, String[] dAPart){ // Not Done
-        if( dAPart.length != 0){
-            boolean bacon = true;
-            return (bacon || included(item, dAPart) );
-        }
-        return true;
-    }
-
 }
