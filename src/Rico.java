@@ -73,6 +73,43 @@ public class Rico {
 
     public static void main(String[] args) // Not Done
     {
+    //Get filename
+    //Load table into dataTable
+    //Create attributeValues
+    //find number of attributes
+    //Get list of decision attributes
+    //Add these attributes to decAttr
+    //Sort values in decAttr
+    //for i = 0 -> num-attr
+        //add i to nonDecAttr if not in decAttr
+    //Ask for max subset size. Let this be max-subset-size
+//////////////////////Code this shit Tom
+//(let (main-part (partition-1-attribute *da*))
+//Code shits in this
+//)
+//For i = 2 -> m
+//Generate subset of size i
+////////////////Code
+//check if a portion of the subset is included in *coverings*
+//then check (proper-subset (partition #|subset|#) main-part)
+//if yes add subset to *coverings*
+/////////////////////File IO again!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//Print coverings when done
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
 
