@@ -17,11 +17,11 @@ public class Rico {
     // The lookup table for values of attributes
     static Vector<String>[] attributeValues;
     // List of Decision Attributes
-    static int[] decAttr;
+    static Set<Integer> decAttr;
     // List of Non-Decision Attributes
-    static int[] nonDecAttr;
+    static Set<Integer> nonDecAttr;
     // List of subsets that form a minimal coverage
-    static Vector<Subset> closures;
+    static Vector<Set<Integer>> coverings;
 
     // Constants
     static int MAX_PARTITION_SIZE = 7;
@@ -77,13 +77,90 @@ public class Rico {
     //Load table into dataTable
     //Create attributeValues
     //find number of attributes
+        int numAttr = 78;
     //Get list of decision attributes
     //Add these attributes to decAttr
-    //Sort values in decAttr
-    //for i = 0 -> num-attr
+        decAttr.add(3);
+        Subset dAPartition; // Initialize da partition
+
+        //for i = 0 -> num-attr
         //add i to nonDecAttr if not in decAttr
     //Ask for max subset size. Let this be max-subset-size
+        int maxSubsetSize = 3;
 //////////////////////Code this shit Tom
+        for( int i = 1; i <= maxSubsetSize; i++){
+            switch (i){
+                case 1:
+                    for(int attr : nonDecAttr){
+                        Set<Integer> attrSet; // Initialize this set
+                        attrSet.add(attr);
+                        Subset testSubset; // Initialize this subset using attrSet
+                        if(dAPartition.properSubset(testSubset)){
+                            coverings.add(attrSet);
+                            nonDecAttr.remove(attrSet);
+                        }
+                    }
+                    break;
+                case 2:
+                    for(int i = 0; i < numAttr - 1; i++){
+                        for(int j = i+1; j < numAttr; j++){
+                            // Make a set containing those items
+                            Set<Integer> currentSet;
+                            // Check if the set is minimal
+                            boolean minimal = true;
+                            for( int covNum = 0; covNum < coverings.size() && minimal; covNum++){
+                                if(coverings.get(covNum).containsAll(currentSet)){
+                                    minimal = false;
+                                }
+                            }
+                            if(minimal){
+                                // Make subset from currentSubset
+                                Subset currentSubset;
+                                if(dAPartition.properSubset(currentSubset)){
+                                    coverings.add(currentSet);
+                                }
+                            }
+                        }
+                    }
+                    break;
+                case 3:
+                    for(int i = 0; i < numAttr - 1; i++){
+                        for(int j = i+1; j < numAttr; j++){
+                            // Make a set containing those items
+                            Set<Integer> currentSet;
+                            // Check if the set is minimal
+                            boolean minimal = true;
+                            for( int covNum = 0; covNum < coverings.size() && minimal; covNum++){
+                                if(coverings.get(covNum).containsAll(currentSet)){
+                                    minimal = false;
+                                }
+                            }
+                            if(minimal){
+                                for( int k = j + 1; k < )
+                                // Make subset from currentSubset
+                                Subset currentSubset;
+                                if(dAPartition.properSubset(currentSubset)){
+                                    coverings.add(currentSet);
+                                }
+                            }
+                        }
+                    }
+                    break;
+                case 4:
+
+                    break;
+                case 5:
+
+                    break;
+                case 6:
+
+                    break;
+                default:
+
+                    break;
+            }
+
+        }
 //(let (main-part (partition-1-attribute *da*))
 //Code shits in this
 //)
@@ -95,22 +172,6 @@ public class Rico {
 //if yes add subset to *coverings*
 /////////////////////File IO again!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //Print coverings when done
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
     private static int lookup( String value, int attrNum ){

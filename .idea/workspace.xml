@@ -4,7 +4,7 @@
     <list default="true" id="bc95751e-dd73-47cc-8bc9-324509fc44bd" name="Default" comment="" />
     <ignored path="Datamining.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Rico.java" changelist="bc95751e-dd73-47cc-8bc9-324509fc44bd" time="1386198641266" ignored="false" />
+    <file path="/Rico.java" changelist="bc95751e-dd73-47cc-8bc9-324509fc44bd" time="1386226028942" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +66,7 @@
       <file leaf-file-name="Rico.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Rico.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="95" column="72" selection-start="2679" selection-end="2679" vertical-scroll-proportion="0.7875">
+            <state line="138" column="56" selection-start="4907" selection-end="4907" vertical-scroll-proportion="0.6357143">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -284,7 +284,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -369,9 +369,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.7.0_10/src.zip!/java/util/Collection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="136" column="8" selection-start="5786" selection-end="5786" vertical-scroll-proportion="-1.8839285">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.7.0_10/src.zip!/java/util/Set.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="0" selection-start="3332" selection-end="3332" vertical-scroll-proportion="0.575">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Rico.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="72" selection-start="2679" selection-end="2679" vertical-scroll-proportion="0.7875">
+        <state line="138" column="56" selection-start="4907" selection-end="4907" vertical-scroll-proportion="0.6357143">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
